@@ -8,6 +8,7 @@ import java.util.*;
 
 // @lc code=start
 class Solution {
+    // 解法一
     public int singleNumber(int[] nums) {
         
         int res = 0;
@@ -16,8 +17,8 @@ class Solution {
         }
         return res;
     }
-/* 
-    public int singleNumber(int[] nums) {
+    // 解法二
+    public int singleNumber_2(int[] nums) {
         Map<Integer, Integer> mp = new HashMap<>();
         for (int i : nums) {
             if(mp.containsKey(i)){
