@@ -23,6 +23,7 @@ public class Solution {
         }
         ListNode low = head;
         ListNode fast = head;
+        // 注意循环条件
         while(fast != null && fast.next != null){
             low = low.next;
             fast = fast.next.next;

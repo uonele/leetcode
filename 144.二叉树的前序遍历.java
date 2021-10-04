@@ -27,6 +27,7 @@ import javax.swing.tree.TreeNode;
  * }
  */
 class Solution {
+    // 通用公式
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if(root == null){

@@ -6,7 +6,7 @@
 
 // @lc code=start
 class Solution {
-    // 标准的二分计算过程
+    // 标准二分计算过程
     // 注意返回值为j（假设x为8，代入计算一下就知道）
     // 二分查找的时候，返回值是j + 1
     public int mySqrt(int x) {
