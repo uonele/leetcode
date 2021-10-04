@@ -45,7 +45,7 @@ class Solution {
         }
         return res;
     }
-/*
+
     // 另一种写法
     public List<Integer> inorderTraversal_2(TreeNode root) {
         List<Integer> list = new ArrayList();
@@ -73,7 +73,7 @@ class Solution {
         }
         return list;
     }
-*/
+
 }
 // @lc code=end
 

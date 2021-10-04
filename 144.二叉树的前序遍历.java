@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 import javax.swing.tree.TreeNode;
@@ -27,6 +28,26 @@ import javax.swing.tree.TreeNode;
  */
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if(root == null){
+            return res;
+        }
+        Stack<TreeNode> s = new Stack<>();
+        TreeNode cur = root;
+        while(!s.isEmpty() || cur != null){
+            while(cur != null){
+                s.add(cur);
+                res.add(cur.val);
+                cur = cur.left;
+            }
+            cur = s.pop();
+            cur = cur.right;
+        }
+        return res;
+    }
+
+    // 解法二
+    public List<Integer> preorderTraversal_2(TreeNode root) {
         List<Integer> list = new ArrayList();
         if(root == null){
             return list;
@@ -48,7 +69,6 @@ class Solution {
 
         }
         return list;
-
     }
 }
 // @lc code=end

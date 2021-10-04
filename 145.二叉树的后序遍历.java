@@ -1,3 +1,8 @@
+import java.util.List;
+import java.util.Stack;
+
+import javax.swing.tree.TreeNode;
+
 /*
  * @lc app=leetcode.cn id=145 lang=java
  *
@@ -21,7 +26,34 @@
  * }
  */
 class Solution {
-    public List<Integer> postorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root){
+        List<Integer> res = new ArrayList<>();
+        if(root == null){
+            return res;
+        }
+        TreeNode pre = null;
+        TreeNode cur = root;
+        Stack<TreeNode> s = new Stack<>();
+        while(!s.isEmpty() || cur != null){
+            while(cur != null){
+                s.push(cur);
+                cur = cur.left;
+            }
+            cur = s.pop();
+            if(cur.right == null || cur.right == pre){
+                res.add(cur.val);
+                pre = cur;
+                cur = null;
+            }else{
+                s.add(cur);
+                cur = cur.right;
+            }
+        }
+        return res;
+    }
+
+    // 另一种取巧法
+    public List<Integer> postorderTraversal_2(TreeNode root) {
         List<Integer> list = new ArrayList();
         if(root == null){
             return list;
