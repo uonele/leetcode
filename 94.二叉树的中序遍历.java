@@ -27,7 +27,27 @@ import javax.swing.tree.TreeNode;
  * }
  */
 class Solution {
+
+
     public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        TreeNode cur = root;
+        Stack<TreeNode> s = new Stack<>();
+        while( cur != null || !s.isEmpty()){
+            if(cur != null ){
+                s.push(cur);
+                cur = cur.left;
+            }else{
+                cur = s.pop();
+                res.add(cur.val);
+                cur = cur.right;
+            }
+        }
+        return res;
+    }
+/*
+    // 另一种写法
+    public List<Integer> inorderTraversal_2(TreeNode root) {
         List<Integer> list = new ArrayList();
         if(root == null){
             return list;
@@ -53,6 +73,7 @@ class Solution {
         }
         return list;
     }
+*/
 }
 // @lc code=end
 
