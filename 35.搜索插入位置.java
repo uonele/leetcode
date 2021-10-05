@@ -13,8 +13,8 @@ class Solution {
         int i = 0;
         int j = nums.length - 1;
         int mid;
-        while(i <= j){
-            mid = i + (j - i) / 2;
+        while(i <= j){  // 这里必须选择等于
+            mid = i + (j - i) / 2;   // 防止溢出
             if( target > nums[mid]){
                 i = mid + 1;
             }else if(target < nums[mid]){
@@ -23,7 +23,7 @@ class Solution {
                 return mid;
             }
         }
-        return j + 1;
+        return j + 1;  // case (1 4 6)找2，试一下就知道了
 
     }
      
