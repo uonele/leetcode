@@ -2,7 +2,7 @@ public class InsertSort {
     public static void main(String[] args) {
         InsertSort is = new InsertSort();
         int[] nums = new int[]{7,8,9,4,3};
-        is.binaryInsertSort(nums);
+        is.insertSort_2(nums);
 
     }
     // 交换法
