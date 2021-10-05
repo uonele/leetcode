@@ -13,6 +13,7 @@ public class QuickSort {
         int j = nums.length - 1;
         partion_2(nums, i, j);
     }
+    // （简洁）方法一
     public void partion_2(int[] nums, int low, int high){
         if(low >= high) return ;
 
@@ -33,6 +34,7 @@ public class QuickSort {
         partion_2(nums, low, i - 1);
         partion_2(nums, i + 1, high);
     }
+    // 方法二（简介明了）
     public void partion(int[] nums, int low, int high){
         if(low >= high) return ;
 
