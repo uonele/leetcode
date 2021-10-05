@@ -5,6 +5,7 @@ public class InsertSort {
         is.insertSort_2(nums);
 
     }
+    // 交换法
     public void insertSort_2(int[] a) {
  
         for (int i = 0; i < a.length - 1; i++) {
@@ -23,6 +24,7 @@ public class InsertSort {
         }
 
     }
+    // 移动法
     public void insertSort(int[] a) {
  
         for (int i = 1; i < a.length; i++) {
