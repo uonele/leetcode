@@ -27,8 +27,28 @@ import javax.swing.tree.TreeNode;
  * }
  */
 class Solution {
-    // 通用公式
-    public List<Integer> preorderTraversal(TreeNode root) {
+     // 解法1  通用公式1
+     public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if(root == null){
+            return res;
+        }
+        Stack<TreeNode> s = new Stack<>();
+        TreeNode cur = root;
+        while(!s.isEmpty() || cur != null){
+            if(cur != null){
+                s.add(cur);
+                res.add(cur.val);
+                cur = cur.left;
+            }else{
+                cur = s.pop();
+                cur = cur.right;
+            }
+        }
+        return res;
+    }
+    // 解法2：通用公式2
+    public List<Integer> preorderTraversal_2(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if(root == null){
             return res;
@@ -47,8 +67,8 @@ class Solution {
         return res;
     }
 
-    // 解法二
-    public List<Integer> preorderTraversal_2(TreeNode root) {
+    // 解法3：
+    public List<Integer> preorderTraversal_3(TreeNode root) {
         List<Integer> list = new ArrayList();
         if(root == null){
             return list;
