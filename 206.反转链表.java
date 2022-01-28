@@ -20,6 +20,9 @@ class Solution {
         if(head == null || head.next == null){
             return head;
         }
+
+        /*
+        循环法
         ListNode pre = null;
         ListNode n = null;
         ListNode cur = head;
@@ -31,6 +34,13 @@ class Solution {
 
         }
         return pre;
+        */
+        // 递归法
+        ListNode res = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return res;
+
 
     }
 }
