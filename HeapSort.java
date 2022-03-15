@@ -1,6 +1,8 @@
 import java.util.Arrays;
 public class HeapSort {
     public static void main(String []args){
+
+        // https://www.cnblogs.com/jingmoxukong/p/4303826.html#java%E7%89%88%E6%9C%AC
         int []arr = {9,8,7,3,5,6,4,2,1};
         HeapSort heap = new HeapSort();
         heap.Sort(arr);
