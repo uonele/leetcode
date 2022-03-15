@@ -16,6 +16,7 @@ public class HeapSort {
         for(int i = (arr.length / 2 - 1); i >= 0; i--){
             adjustHeap(arr,0 , arr.length - 1);
         }
+
         for(int j = arr.length - 1; j >= 0; j--){
             swap(arr, 0, j);
             adjustHeap(arr, 0, j);
@@ -26,6 +27,7 @@ public class HeapSort {
         int temp = arr[parent];
         int child = parent * 2 + 1;
 
+        // 这里注意不能小于等于
         while(child < len){
             if(child + 1 < len && arr[child + 1] > arr[child]){
                 child++;
