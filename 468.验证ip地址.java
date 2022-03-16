@@ -18,8 +18,6 @@ class Solution {
 
     public boolean isIPv4(String str){
 
-        //
-        //
         // 对比的时候需要注意 ‘.’是字符，"."是字符串
         if(str.length() < 7 || str.length() > 15 || str.charAt(str.length() - 1) == '.'){
             return false;
@@ -53,6 +51,7 @@ class Solution {
         return true;
     }
 
+    // 这个不会
     public boolean isIPv6(String IP){
         String[] strings = IP.trim().split(":");
         if(strings.length!=8||IP.charAt(IP.length()-1)==':') return false;
